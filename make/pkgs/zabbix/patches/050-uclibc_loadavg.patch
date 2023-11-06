@@ -6,7 +6,7 @@
  
 +
 +/* uclibc and dietlibc do not have this junk -ReneR */
-+#if defined (__UCLIBC__) || defined (__dietlibc__)
++#if defined (__dietlibc__) || ( defined(__UCLIBC__) &&  ( __UCLIBC_MAJOR__ == 0  || ( __UCLIBC_MAJOR__ == 1 && __UCLIBC_MINOR__ == 0 && __UCLIBC_SUBLEVEL__ < 41 ) ) )
 +static int getloadavg (double loadavg[], int nelem)
 +{
 +  int fd;
