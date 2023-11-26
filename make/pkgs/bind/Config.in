@@ -71,5 +71,11 @@ if FREETZ_PACKAGE_BIND
 		help
 			Adds the dig DNS lookup utility.
 
+	config FREETZ_PACKAGE_BIND_HOST
+		bool "host (binary only)"
+		default n
+		help
+			Adds the host DNS lookup utility.
+
 endif # FREETZ_PACKAGE_BIND
 
